@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 :root {
   font-size: 16px;
   font-family: 'Open Sans';
   scrollbar-color: var(--primary) var(--dark);
   scrollbar-width: thin;
   overflow-x: hidden;
-  --primary: #bf7969;
-  --primary-light: #d9b79a;
+  --primary: #d57a66;
+  --primary-light: #edc79b;
   --dark: #171c28;
-  --light: #f5f6f7;
+  --light: #fbfbff;
 }
 
 * {
@@ -16,12 +18,16 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #f5f6f7;
+}
+
 body {
   height: 100vh;
   width: 100vw;
   font-family: 'Roboto', sans-serif;
   letter-spacing: 1px;
-  background-color: var(--dark);
 }
 
 body::-webkit-scrollbar {
@@ -34,7 +40,6 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background-color: var(--primary);
-  /* border-radius: 0.25rem; */
 }
 
 /* Utility Classes */
@@ -55,6 +60,7 @@ body::-webkit-scrollbar-thumb {
 
 header {
   height: 70px;
+  background: var(--dark);
 }
 header .navbar {
   max-width: 1400px;
@@ -74,56 +80,116 @@ header .navbar ul {
 }
 
 header .navbar ul li {
-  padding: 20px 20px;
+  padding: 1.25rem 1.25rem;
   float: left;
 }
 
 header .navbar ul li a {
+  display: block;
   font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: var(--primary);
-  letter-spacing: 3px;
+
+  letter-spacing: 2px;
 }
 
 header .navbar ul li a:hover {
-  color: var(--primary-light);
-  text-decoration: underline;
-  text-decoration-color: var(--primary);
-  text-decoration-line: underline;
+  color: var(--primary);
+  /* text-decoration: underline;
+  text-decoration-color: var(--primary); */
+}
+
+header .navbar ul a .github-logo {
+  margin-left: 1.25rem;
+  padding-top: 0.9rem;
+}
+
+header .navbar ul li a span {
+  color: var(--primary);
+}
+
+.centered-container {
+  height: 10rem;
+  padding: 4rem 0;
+  width: 100%;
 }
 
 /*  Title container */
 
-.title-container {
-  margin-left: 5%;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 30px;
-  max-width: 1200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+#introduction {
+  background: var(--dark);
 }
 
-.title-container h1 {
+.title-container {
+  margin-left: 5%;
+  padding-top: 2rem;
+}
+
+.title-container div {
+  max-width: 80%;
+}
+
+.title-container div h1 {
+  color: #6e7dab;
   font-weight: bold;
   font-size: 5rem;
 }
 
-.title-container h2 {
+.title-container div h2 {
   font-size: 5rem;
   color: var(--primary);
 }
 
-.title-container p {
+.title-container div p {
   font-size: 1.25rem;
-  margin-top: 30px;
-  color: var(--primary-light);
+  margin-top: 2rem;
+  color: var(--light);
 }
 
-.title-container p span {
+.title-container div p span {
   font-size: 1.1rem;
+}
+
+.centered-container div {
+  width: auto;
+  max-width: 400px;
+  margin-left: 5%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.centered-container div .btn {
+  font-weight: bold;
+  padding: 20px;
+  min-width: 10rem;
+  font-size: 1.1rem;
+  border: 1px solid var(--primary);
+  border-radius: 0.4rem;
+  background-color: none;
+  text-align: center;
+}
+
+.btn-primary {
+  text-transform: capitalize;
+  color: var(--dark);
+  background: var(--primary);
+  border: none;
+}
+
+.btn-primary:hover {
+  color: var(--dark);
+}
+
+.btn-primary-light {
+  text-transform: capitalize;
+  color: var(--light);
+}
+
+.btn-primary-light:hover {
+  color: var(--primary);
+}
+
+.wave {
+  margin-bottom: 0;
 }
 
 .square-box {
@@ -140,17 +206,15 @@ header .navbar ul li a:hover {
 }
 
 #projects {
-  padding: 30px 5% 0 100px;
+  display: flex;
+  justify-content: space-between;
   font-size: 1.25rem;
-  margin-top: 60px;
-  height: 400px;
-  width: 100%;
-  color: var(--dark);
-  background: var(--primary-light);
+  margin-top: 4rem;
+  height: 30rem;
 }
 
 .square-box {
-  padding-top: 20px;
+  margin: auto;
 }
 
 .square-box label {
@@ -175,4 +239,37 @@ header .navbar ul li a:hover {
 
 .square-box input:focus {
   outline: none;
+}
+
+section .main-footer {
+  background: var(--dark);
+  height: 5rem;
+  text-align: center;
+  color: var(--light);
+  font-size: 1rem;
+}
+
+section .main-footer a {
+  max-width: 500px;
+  display: inline-block;
+  font-family: monospace;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+section .main-footer a:hover {
+}
+
+.cool-link::after {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 2px;
+  background-color: var(--primary);
+  transition: width 0.3s;
+}
+
+.cool-link:hover::after {
+  width: 100%;
+  transition: width 0.3s;
 }

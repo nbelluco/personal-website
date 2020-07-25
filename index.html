@@ -7,20 +7,24 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="images/apple-touch-icon.png"
+      href="images/favicon-blue-pink/apple-touch-icon.png"
     />
-    <link rel="icon" type="image/png" href="images/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/favicon-blue-pink/favicon.ico"
+    />
 
     <link
       rel="icon"
       type="image/png"
-      href="images/favicon-32x32.png"
+      href="images/favicon-blue-pink/favicon-32x32.png"
       sizes="32x32"
     />
     <link
       rel="icon"
       type="image/png"
-      href="images/favicon-16x16.png"
+      href="images/favicon-blue-pink/favicon-16x16.png"
       sizes="16x16"
     />
 
@@ -31,39 +35,80 @@
       <nav class="navbar">
         <h1 class="text-light"></h1>
         <ul>
-          <li><a class="text-light" href="#">About</a></li>
-          <li><a class="text-light" href="#">Projects</a></li>
-          <li><a class="text-light" href="#">Contact</a></li>
+          <li>
+            <a class="text-light cool-link" href="#"><span>>></span> ABOUT</a>
+          </li>
+          <li>
+            <a class="text-light cool-link" href="#"
+              ><span>>></span> PROJECTS</a
+            >
+          </li>
+          <li>
+            <a class="text-light cool-link" href="#projects"
+              ><span>>></span> CONTACT</a
+            >
+          </li>
+          <a href="https://github.com">
+            <img
+              class="github-logo"
+              src="images/GitHub-Mark/PNG/GitHub-Mark-Light-32px.png"
+              alt="GitHub logo"
+              target="blank"
+          /></a>
         </ul>
       </nav>
     </header>
     <section id="introduction">
       <div class="title-container">
-        <p class="paragraph text-primary">
-          <span>Hey there ! My name is</span>
-        </p>
-        <h1 class="text-light">Nicolò Belluco</h1>
-        <h2 class="text-light">
-          I |> Open Source
-        </h2>
-        <p class="paragraph text-primary">
-          I'm a software engineer based in Padua, Italy. My focus is on building
-          visually stunning and reliable applications.
-        </p>
+        <div>
+          <p class="paragraph text-primary">
+            <span>Hey there ! My name is</span>
+          </p>
+        </div>
+        <div>
+          <h1 class="text-light">Nicolò Belluco</h1>
+        </div>
+        <div>
+          <h2 class="text-light">
+            Full Stack Engineer
+          </h2>
+        </div>
+        <div>
+          <p class="paragraph text-primary">
+            I'm a software engineer based in Padua, Italy. My focus is on
+            building visually stunning and reliable applications.
+          </p>
+        </div>
+      </div>
+
+      <div class="centered-container">
+        <div class="container">
+          <a class="btn btn-primary" href="#">Get in touch</a>
+          <a
+            class="btn btn-primary-light"
+            href="Documents/resume.pdf"
+            target="blank"
+            >Get resume</a
+          >
+        </div>
       </div>
     </section>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        class="wave"
+        fill="#171C28"
+        fill-opacity="1"
+        d="M0,160L30,149.3C60,139,120,117,180,96C240,75,300,53,360,58.7C420,64,480,96,540,96C600,96,660,64,720,42.7C780,21,840,11,900,10.7C960,11,1020,21,1080,53.3C1140,85,1200,139,1260,149.3C1320,160,1380,128,1410,112L1440,96L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"
+      ></path>
+    </svg>
 
     <section id="projects"></section>
-    <div class="square-box">
-      <div class="form">
-        <label for="email">Contact me !</label>
-        <input
-          type="text"
-          name="email"
-          id="email"
-          placeholder="email address"
-        />
-      </div>
-    </div>
+    <section>
+      <footer class="main-footer">
+        <a href="#" class="cool-link"
+          >Designed and developed by Nicolò Belluco</a
+        >
+      </footer>
+    </section>
   </body>
 </html>
